@@ -1,1 +1,82 @@
-<!doctype html><html><body>Projects placeholder. Replace with your full HTML.</body></html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Projects — Huzi</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html"><img src="assets/logo.svg" alt="" class="logo" />Huzi</a>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
+        <button id="theme-toggle-3" class="btn-icon" aria-label="Toggle theme">🌓</button>
+      </nav>
+      <button id="nav-toggle-3" class="nav-toggle" aria-label="Open menu">☰</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <section>
+      <h1>Projects</h1>
+      <p>Filter projects by technology:</p>
+      <div class="filter-row">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="html">HTML</button>
+        <button class="filter-btn" data-filter="css">CSS</button>
+        <button class="filter-btn" data-filter="js">JavaScript</button>
+      </div>
+
+      <div class="grid project-grid" id="projects-list">
+        <!-- Portfolio -->
+        <article class="project-card" data-tags="html css js">
+          <img src="assets/project1.jpg" alt="Portfolio project">
+          <div class="p-body">
+            <h3>Personal Portfolio (This project)</h3>
+            <p>Responsive personal portfolio built with HTML, CSS and vanilla JS. Features: dark/light mode, project filters, contact form validation and a hero slider.</p>
+            <p class="p-tags">Tags: <span>HTML</span> <span>CSS</span> <span>JS</span></p>
+            <p class="p-links">
+              <a href="#" target="_blank" rel="noopener">Live</a> • <a href="#" target="_blank" rel="noopener">Source</a>
+            </p>
+          </div>
+        </article>
+
+        <!-- Bakery site -->
+        <article class="project-card" data-tags="html css">
+          <img src="assets/project2.jpg" alt="Bakery site">
+          <div class="p-body">
+            <h3>Bakery Landing Page</h3>
+            <p>A small business site for a local bakery showcasing menu, hours, and contact details. Built with mobile-first layout using CSS Grid & Flexbox.</p>
+            <p class="p-tags">Tags: <span>HTML</span> <span>CSS</span></p>
+            <p class="p-links"><a href="#" target="_blank" rel="noopener">Live</a> • <a href="#" target="_blank" rel="noopener">Source</a></p>
+          </div>
+        </article>
+
+        <!-- Quiz app -->
+        <article class="project-card" data-tags="js">
+          <img src="assets/project3.jpg" alt="Quiz app">
+          <div class="p-body">
+            <h3>Interactive Quiz App</h3>
+            <p>Vanilla JS quiz with dynamic questions, scoring, and local score storage. Demonstrates DOM manipulation and simple app logic.</p>
+            <p class="p-tags">Tags: <span>JS</span></p>
+            <p class="p-links"><a href="#" target="_blank" rel="noopener">Live</a> • <a href="#" target="_blank" rel="noopener">Source</a></p>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year3"></span> Huzi</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
