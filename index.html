@@ -1,1 +1,84 @@
-<!doctype html><html><body>Portfolio placeholder. Replace with your full HTML.</body></html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Huzi — Frontend Developer</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <meta name="description" content="Huzi — Frontend Developer portfolio (HTML, CSS, JavaScript)" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <img src="assets/logo.svg" alt="logo" class="logo" />
+        <span>Huzi</span>
+      </a>
+
+      <nav class="nav" id="nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
+        <button id="theme-toggle" class="btn-icon" aria-label="Toggle theme">🌓</button>
+      </nav>
+
+      <button id="nav-toggle" class="nav-toggle" aria-label="Open menu">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <h1 class="display">Hi — I'm <span class="accent">Huzi</span><br/>Frontend Developer</h1>
+          <p class="lead">I’m a BS Computer Science student at CUVAS building responsive, accessible interfaces using HTML, CSS and vanilla JavaScript. I enjoy small UI challenges, and learning about cybersecurity, AI, and cloud computing.</p>
+
+          <p class="cta-row">
+            <a class="btn" href="projects.html">View Projects</a>
+            <a class="btn ghost" href="contact.html">Contact Me</a>
+          </p>
+
+          <ul class="badges">
+            <li>HTML5</li><li>CSS3</li><li>JavaScript</li><li>Responsive</li>
+          </ul>
+        </div>
+
+        <div class="hero-media">
+          <div class="slider" id="hero-slider">
+            <img src="assets/hero1.jpg" alt="screenshot 1" />
+            <img src="assets/hero2.jpg" alt="screenshot 2" />
+            <img src="assets/hero3.jpg" alt="screenshot 3" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="skills container">
+      <h2>What I do</h2>
+      <div class="grid skills-grid">
+        <article class="card">
+          <h3>Responsive UI</h3>
+          <p>Design and implement responsive layouts with Flexbox and CSS Grid for mobile and desktop.</p>
+        </article>
+        <article class="card">
+          <h3>Interactive JS</h3>
+          <p>Form validation, dynamic filters, and small app logic using modern vanilla JavaScript (ES6+).</p>
+        </article>
+        <article class="card">
+          <h3>Performance & Accessibility</h3>
+          <p>Semantic HTML, optimized assets and keyboard-friendly interfaces following basic a11y practices.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Huzi — Frontend Developer • <a href="contact.html">Get in touch</a></p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
