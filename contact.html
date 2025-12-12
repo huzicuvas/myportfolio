@@ -1,1 +1,71 @@
-<!doctype html><html><body>Contact placeholder. Replace with your full HTML.</body></html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact — Huzi</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html"><img src="assets/logo.svg" alt="" class="logo" />Huzi</a>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
+        <button id="theme-toggle-4" class="btn-icon" aria-label="Toggle theme">🌓</button>
+      </nav>
+      <button id="nav-toggle-4" class="nav-toggle" aria-label="Open menu">☰</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="contact-section">
+      <div>
+        <h1>Contact Me</h1>
+        <p>Want to work together or ask about a project? Send a message using the form below.</p>
+
+        <form id="contact-form" class="contact-form" novalidate>
+          <label>
+            <span>Name</span>
+            <input type="text" name="name" id="name" required minlength="2" />
+          </label>
+
+          <label>
+            <span>Email</span>
+            <input type="email" name="email" id="email" required />
+          </label>
+
+          <label>
+            <span>Message</span>
+            <textarea name="message" id="message" rows="6" required minlength="10"></textarea>
+          </label>
+
+          <p>
+            <button type="submit" class="btn">Send Message</button>
+          </p>
+
+          <div id="form-msg" class="form-msg" aria-live="polite"></div>
+        </form>
+      </div>
+
+      <aside class="contact-info">
+        <h3>Other ways</h3>
+        <p>Email: <a href="mailto:huzi@example.com">huzi@example.com</a></p>
+        <p>GitHub: <a href="https://github.com/yourusername" target="_blank" rel="noopener">github.com/yourusername</a></p>
+        <p>Location: Islamabad, Pakistan (CUVAS)</p>
+      </aside>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year4"></span> Huzi</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
