@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact Me</title>
+
+  <style>
+    body {
+      background-color: #020617;
+      font-family: Arial, sans-serif;
+      color: #e5e7eb;
+    }
+
+    .contact {
+      padding: 60px 20px;
+      max-width: 600px;
+      margin: auto;
+    }
+
+    .contact h2 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    .contact p {
+      font-size: 0.95rem;
+      color: #9ca3af;
+      margin-bottom: 25px;
+    }
+
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      background: #0f172a;
+      border: 1px solid #1f2933;
+      border-radius: 10px;
+      padding: 12px 14px;
+      color: #e5e7eb;
+      font-size: 0.95rem;
+    }
+
+    .contact-form input::placeholder,
+    .contact-form textarea::placeholder {
+      color: #6b7280;
+    }
+
+    .contact-form button {
+      background: linear-gradient(90deg, #22d3ee, #ec4899);
+      border: none;
+      border-radius: 12px;
+      padding: 12px;
+      color: #020617;
+      font-weight: 600;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+
+    .contact-form button:hover {
+      transform: translateY(-2px);
+    }
+  </style>
+</head>
+
+<body>
+
+  <section class="contact" id="contact">
+    <h2>fill the form </h2>
+    <p>Feel free to reach out for any questions or feedback.</p>
+
+    <form class="contact-form">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+</body>
+</html>
