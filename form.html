@@ -103,17 +103,24 @@
 <body>
 
   <!-- NAVBAR -->
-  <header>
-    <div class="navbar">
-      <div class="logo">Huzi</div>
-      <div class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="projects.html">Projects</a>
-        <a href="contact.html">Contact</a>
-      </div>
-    </div>
-  </header>
+ <<header class="site-header">
+  <div class="container header-inner">
+
+    <a class="brand" href="index.html">
+        <span>Huzaifa</span>
+      </a>
+
+    <button class="nav-toggle" onclick="toggleNav()">☰</button>
+
+    <nav class="nav" id="mainNav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+  </div>
+</header>
   <!-- CONTACT -->
   <section id="contact">
     <h2>Fill the Form </h2>
