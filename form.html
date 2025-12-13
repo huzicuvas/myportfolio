@@ -2,33 +2,72 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Contact Me</title>
+  <title>Huzi Portfolio</title>
 
   <style>
     body {
-      background-color: #020617;
+      margin: 0;
       font-family: Arial, sans-serif;
+      background-color: #020617;
       color: #e5e7eb;
+      scroll-behavior: smooth;
     }
 
-    .contact {
-      padding: 60px 20px;
-      max-width: 600px;
+    /* NAVBAR */
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(2, 6, 23, 0.9);
+      backdrop-filter: blur(10px);
+      z-index: 1000;
+    }
+
+    .navbar {
+      max-width: 1100px;
+      margin: auto;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #22d3ee;
+    }
+
+    .nav-links a {
+      margin-left: 25px;
+      text-decoration: none;
+      color: #cbd5f5;
+      font-size: 0.95rem;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: #22d3ee;
+    }
+
+    /* SECTIONS */
+    section {
+      padding: 100px 20px;
+      max-width: 1100px;
       margin: auto;
     }
 
-    .contact h2 {
-      font-size: 2rem;
-      margin-bottom: 10px;
+    #home {
+      padding-top: 140px;
     }
 
-    .contact p {
-      font-size: 0.95rem;
-      color: #9ca3af;
-      margin-bottom: 25px;
+    h2 {
+      margin-bottom: 15px;
     }
 
+    /* CONTACT FORM */
     .contact-form {
+      max-width: 500px;
       display: flex;
       flex-direction: column;
       gap: 15px;
@@ -39,14 +78,8 @@
       background: #0f172a;
       border: 1px solid #1f2933;
       border-radius: 10px;
-      padding: 12px 14px;
+      padding: 12px;
       color: #e5e7eb;
-      font-size: 0.95rem;
-    }
-
-    .contact-form input::placeholder,
-    .contact-form textarea::placeholder {
-      color: #6b7280;
     }
 
     .contact-form button {
@@ -54,24 +87,55 @@
       border: none;
       border-radius: 12px;
       padding: 12px;
-      color: #020617;
-      font-weight: 600;
+      font-weight: bold;
       cursor: pointer;
-      transition: transform 0.2s ease;
     }
 
-    .contact-form button:hover {
-      transform: translateY(-2px);
+    footer {
+      text-align: center;
+      padding: 30px;
+      color: #94a3b8;
+      font-size: 0.85rem;
     }
   </style>
 </head>
 
 <body>
 
-  <section class="contact" id="contact">
-    <h2>fill the form </h2>
-    <p>Feel free to reach out for any questions or feedback.</p>
+  <!-- NAVBAR -->
+  <header>
+    <div class="navbar">
+      <div class="logo">Huzi</div>
+      <div class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </header>
 
+  <!-- HOME -->
+  <section id="home">
+    <h2>Hi — I'm Huzi</h2>
+    <p>BS Computer Science first-semester student at CUVAS Bahawalpur.</p>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <h2>About Me</h2>
+    <p>I’m learning frontend development and have basic experience with HTML, CSS, JavaScript, and WordPress.</p>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <h2>Projects</h2>
+    <p>My projects will appear here soon.</p>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <h2>Contact Me</h2>
     <form class="contact-form">
       <input type="text" placeholder="Your Name" required>
       <input type="email" placeholder="Your Email" required>
@@ -79,6 +143,11 @@
       <button type="submit">Send Message</button>
     </form>
   </section>
+
+  <!-- FOOTER -->
+  <footer>
+    © 2025 Huzi — Frontend Developer
+  </footer>
 
 </body>
 </html>
