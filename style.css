@@ -103,3 +103,42 @@ body{
 /* utility */
 .lead small{color:var(--muted)}
 /* CSS placeholder */
+
+/* ===== MOBILE NAV FIX ===== */
+
+@media (max-width: 640px) {
+  .header-inner {
+    position: relative;
+  }
+
+  /* hide nav by default */
+  .nav {
+    display: none;
+    position: absolute;
+    top: 64px;
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    background: var(--panel);
+    padding: 16px 0;
+    border-radius: 0 0 var(--radius) var(--radius);
+    box-shadow: 0 12px 30px rgba(2,6,23,0.6);
+  }
+
+  .nav a {
+    padding: 12px 20px;
+    width: 100%;
+    text-align: center;
+  }
+
+  /* show when active */
+  .nav.active {
+    display: flex;
+  }
+
+  /* hamburger visible */
+  .nav-toggle {
+    display: block;
+    cursor: pointer;
+  }
+}
