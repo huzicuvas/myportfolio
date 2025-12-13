@@ -99,3 +99,12 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 // JS placeholder
+
+function toggleNav() {
+  document.getElementById("mainNav").classList.toggle("active");
+}
+document.querySelectorAll(".nav a").forEach(link => {
+  link.addEventListener("click", () => {
+    document.getElementById("mainNav").classList.remove("active");
+  });
+});
