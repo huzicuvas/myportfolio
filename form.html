@@ -1,114 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Huzi Portfolio</title>
+<meta charset="UTF-8">
+<title>Huzi Portfolio</title>
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #020617;
-      color: #e5e7eb;
-      scroll-behavior: smooth;
-    }
+<style>
+/* ===== BASE ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-    /* NAVBAR */
-    header {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      background: rgba(2, 6, 23, 0.9);
-      backdrop-filter: blur(10px);
-      z-index: 1000;
-    }
+body {
+  font-family: Arial, sans-serif;
+  background-color: #020617;
+  color: #e5e7eb;
+  scroll-behavior: smooth;
+}
 
-    .mainnav {
-      max-width: 1100px;
-      margin: auto;
-      padding: 15px 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
+/* ===== NAVBAR ===== */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(2, 6, 23, 0.9);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+}
 
-    .logo {
-      font-size: 1.2rem;
-      font-weight: bold;
-      color: #22d3ee;
-    }
+.header-inner {
+  max-width: 1100px;
+  margin: auto;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
 
-    .nav-links a {
-      margin-left: 25px;
-      text-decoration: none;
-      color: #cbd5f5;
-      font-size: 0.95rem;
-      transition: color 0.2s;
-    }
+.brand {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #22d3ee;
+  text-decoration: none;
+}
 
-    .nav-links a:hover {
-      color: #22d3ee;
-    }
+/* NAV LINKS */
+.nav {
+  display: flex;
+  gap: 25px;
+}
 
-    /* SECTIONS */
-    section {
-      padding: 100px 20px;
-      max-width: 1100px;
-      margin: auto;
-    }
+.nav a {
+  text-decoration: none;
+  color: #cbd5f5;
+  font-size: 0.95rem;
+}
 
-    #home {
-      padding-top: 140px;
-    }
+.nav a:hover {
+  color: #22d3ee;
+}
 
-    h2 {
-      margin-bottom: 15px;
-    }
+/* HAMBURGER */
+.nav-toggle {
+  display: none;
+  font-size: 1.6rem;
+  background: none;
+  border: none;
+  color: #22d3ee;
+  cursor: pointer;
+}
 
-    /* CONTACT FORM */
-    .contact-form {
-      max-width: 500px;
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-    }
+/* ===== SECTIONS ===== */
+section {
+  padding: 120px 20px;
+  max-width: 1100px;
+  margin: auto;
+}
 
-    .contact-form input,
-    .contact-form textarea {
-      background: #0f172a;
-      border: 1px solid #1f2933;
-      border-radius: 10px;
-      padding: 12px;
-      color: #e5e7eb;
-    }
+h2 {
+  margin-bottom: 15px;
+}
 
-    .contact-form button {
-      background: linear-gradient(90deg, #22d3ee, #ec4899);
-      border: none;
-      border-radius: 12px;
-      padding: 12px;
-      font-weight: bold;
-      cursor: pointer;
-    }
+/* ===== CONTACT FORM ===== */
+.contact-form {
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+}
 
-    footer {
-      text-align: center;
-      padding: 30px;
-      color: #94a3b8;
-      font-size: 0.85rem;
-    }
-  </style>
+.contact-form input,
+.contact-form textarea {
+  background: #0f172a;
+  border: 1px solid #1f2933;
+  border-radius: 10px;
+  padding: 12px;
+  color: #e5e7eb;
+}
+
+.contact-form button {
+  background: linear-gradient(90deg, #22d3ee, #ec4899);
+  border: none;
+  border-radius: 12px;
+  padding: 12px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  text-align: center;
+  padding: 30px;
+  color: #94a3b8;
+  font-size: 0.85rem;
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 768px) {
+  .nav {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    background: #020617;
+    padding: 15px 0;
+    text-align: center;
+  }
+
+  .nav.active {
+    display: flex;
+  }
+
+  .nav a {
+    padding: 12px 0;
+  }
+
+  .nav-toggle {
+    display: block;
+  }
+}
+</style>
 </head>
 
 <body>
 
-  <!-- NAVBAR -->
- <<header class="site-header">
-  <div class="container header-inner">
-
-    <a class="brand" href="index.html">
-        <span>Huzaifa</span>
-      </a>
+<!-- NAVBAR -->
+<header>
+  <div class="header-inner">
+    <a href="index.html" class="brand">Huzaifa</a>
 
     <button class="nav-toggle" onclick="toggleNav()">☰</button>
 
@@ -119,25 +163,33 @@
       <a href="contact.html">Contact</a>
       <a href="form.html">Form</a>
     </nav>
-<button id="theme-toggle-2" class="btn-icon" aria-label="Toggle theme">🌓</button>
   </div>
 </header>
-  <!-- CONTACT -->
-  <section id="contact">
-    <h2>Fill the Form </h2>
-    <p>Feel free to reach out for any questions or feedback.</p>
-    <form class="contact-form">
-      <input type="text" placeholder="Your Name" required>
-      <input type="email" placeholder="Your Email" required>
-      <textarea rows="5" placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-  </section>
 
-  <!-- FOOTER -->
-  <footer>
-    © 2025 Huzi — Frontend Developer
-  </footer>
+<!-- CONTACT -->
+<section id="contact">
+  <h2>Fill the Form</h2>
+  <p>Feel free to reach out for any questions or feedback.</p>
+
+  <form class="contact-form">
+    <input type="text" placeholder="Your Name" required>
+    <input type="email" placeholder="Your Email" required>
+    <textarea rows="5" placeholder="Your Message" required></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  © 2025 Huzi — Frontend Developer
+</footer>
+
+<!-- JS -->
+<script>
+function toggleNav() {
+  document.getElementById("mainNav").classList.toggle("active");
+}
+</script>
 
 </body>
 </html>
